@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="style.css"> 
+   
+
+    
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="flex">
+            <img src="./images/dog.png" alt="outline of a dog's face with heart above it">
+            <h1>Delilah's Doggy Daycare</h1>
+        </a>
+    </header>
+     
+    <div id="main">
+     <div id="contents">
+        <h1>Booking Rate Calculator</h1>
+       <p>My pup will come in on</p>
+    <div id="days">
+        <button class="day" onclick="toggleDay(this, 20)">Mon</button>
+        <button class="day" onclick="toggleDay(this, 20)">Tue</button>
+        <button class="day" onclick="toggleDay(this, 20)">Wed</button>
+        <button class="day" onclick="toggleDay(this, 20)">Thu</button>
+        <button class="day" onclick="toggleDay(this, 20)">Fri</button>
+       
+    </div>
+    
+         <div>
+            <button class="small-button half" onclick="changeToHalfDay()">Half </button>
+            <button class="small-button full" onclick="changeToFullDay()">Full </button>
+        </div>
+
+         <div id="calculated-cost" class="top-margin"></div>
+
+    <button onclick="clearDays()" class="clear-button">Clear Days</button>
+
+   
+</div>
+
+</div>
+
+<footer>
+    <p>Dog icons created by <a href="https://www.flaticon.com/free-icons/dog" title="dog icons">Freepik -
+            Flaticon</a></p>
+    <p>Photo by <a href="https://unsplash.com/photos/NE0XGVKTmcA">Karsten Winegeart</a> on unsplash</p>
+</footer>
+
+    <script src="booking.js"></script> 
+
+</body>
+
+</html>

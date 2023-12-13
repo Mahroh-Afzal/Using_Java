@@ -1,0 +1,564 @@
+/************* your name: Mahroh Afzal */
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+:root {
+    --mustard-yellow: #E5AF42;
+    --cornflower-blue: #4278e5;
+  }
+
+
+/************* site defaults *************/
+body {
+    width: 950px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+}
+
+
+
+/* Flex Container */
+.flex {
+    display: flex;
+  }
+  
+  /* Site-wide Text Styling */
+  h1 {
+    font-size: 48px;
+    text-align: center;
+    line-height: 48px;
+  }
+  
+  h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .large-text {
+    font-size: 24px;
+  }
+  
+  .fake-button {
+    background-color: var(--mustard-yellow);
+    text-align: center;
+    line-height: 3;
+    border: 1px solid #000;
+    cursor: pointer;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .fake-button:hover,
+  .blue-hover:hover {
+    text-decoration: underline;
+    background-color: var(--cornflower-blue);
+    color: #fff;
+  }
+  
+
+
+
+
+  /* Header/Footer Styling */
+ 
+
+
+  header,
+  footer {
+    background-color: var(--mustard-yellow);
+  }
+  
+  header {
+    height: 150px;
+    position: relative;
+    margin-top: 15px;
+  
+  }
+  
+  header img {
+    width: 100px;
+    height: 100px;
+    margin: 25px;
+    position: absolute;
+   
+    
+  
+  }
+  
+  
+  header h2 {
+      position: absolute;
+      left: 50%; /* Set left to 50% */
+      transform: translateX(-50%); /* Center the text using transform */
+      text-align: center;
+      line-height: 100px;
+      color: #000;
+    }
+  
+
+
+
+
+  main {
+    margin-top: 25px;
+    margin-bottom: 50px;
+  }
+  
+ 
+
+
+
+  /* Style the footer */
+footer {
+    height: 120px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 60px;
+    background-color: var(--mustard-yellow); /* Add background color if needed */
+    margin-bottom: 12px;
+}
+
+/* Style the anchor links inside the footer */
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+  
+
+
+/************* index page *************/
+
+/* TO-DO: 
+    - this is a 2-column layout: text on the left, and an image on the right. The image will be 300px wide, with 25px between it and the text column, which takes up the remaining space. The image will also have 50px of space below.
+    - the h2 on this page will have a line-height equal to the font size.
+    - each paragraph on this page will have 12px of space beneath it.
+    - each fake-button on this page will be 250px wide with 150px of space between them.
+    - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
+*/
+
+
+
+/* Two-column layout */
+.index .flex {
+    display: flex;
+}
+
+.index .about-us {
+    flex: 1;
+    margin-right: 25px; /* Space between text and image */
+}
+
+.index img {
+    width: 300px;
+    margin-bottom: 50px;
+}
+
+/* Styling for h1 and h2 */
+.index h1 {
+    font-size: 48px;
+    text-align: center;
+    line-height: 48px;
+}
+
+.index h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+/* Styling for h2 line-height */
+.index h2 {
+    line-height: 36px; /* Equal to the font size */
+}
+
+/* Spacing for paragraphs */
+.index p {
+    margin-bottom: 12px;
+}
+
+/* Styling for fake-buttons */
+.index .flex a.fake-button {
+    width: 250px;
+    margin: 0 150px; /* Space between fake-buttons and centering */
+    background-color: var(--mustard-yellow);
+    text-align: center;
+    line-height: 1;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+/* Styling for anchor links */
+.index a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Hover state for fake-buttons and blue-hover elements */
+.index .flex a.fake-button:hover,
+.index .flex a.blue-hover:hover {
+    text-decoration: underline;
+    background-color: var(--cornflower-blue);
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Center the pair of fake-buttons */
+.index .flex {
+    justify-content: center;
+}
+
+
+
+
+/************* bookings page *************/
+
+/* TO-DO:
+    - the contents of the booking-page will be 600px wide, and all content centered within the available space.
+    - text will have a size of 18px.
+    - there will be 12px of space below the day-selectors, and 20px of space between each list item. List items are 60px wide.
+    - List items & the small-button elements will have a solid black border that is 1px wide. Small-buttons will also have 5px of space between the border and the content.
+    - items tagged with .top-margin will have 24 px of space above, and 12px of space below.
+    - the "clear days" button will be 200px wide.
+    - any element tagged with the .clicked class will turn mustard yellow. **This will be very important for your JavaScript.**
+    - all items within the page will be centered within their available space.
+
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+:root {
+  --mustard-yellow: #E5AF42;
+  --cornflower-blue: #4278e5;
+}
+
+
+/************* site defaults *************/
+body {
+  width: 950px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+}
+
+
+
+header,
+footer {
+background-color: var(--mustard-yellow);
+}
+
+header {
+height: 150px;
+position: relative;
+margin-top: 15px;
+
+}
+
+header img {
+width: 100px;
+height: 100px;
+margin: 25px;
+position: absolute;
+
+
+
+}
+
+
+header h1 {
+  position: absolute;
+  left: 50%; /* Set left to 50% */
+  transform: translateX(-50%); /* Center the text using transform */
+  text-align: center;
+  line-height: 100px;
+  color: #000;
+}
+
+
+
+
+#contents {
+  width: 100%; /* Change to 100% to use the full width of the page */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  margin-top: 50px;
+}
+
+#days {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.day {
+  width: 60px;
+  border: 1px solid #000;
+  margin: 0 5px;
+  padding: 5px;
+  text-align: center;
+  font-size: 18px;
+}
+
+button.small-button {
+  width: 60px;
+  border: 1px solid #000;
+  margin: 0 5px;
+  padding: 5px;
+  text-align: center;
+}
+
+.top-margin {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+#calculated-cost {
+  width: 100%; /* Use the full width of the parent container */
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+
+.clear-button {
+  width: 200px;
+  height: 35px;
+  background-color: #E5AF42;
+}
+.clear-button:hover {
+  width: 200px;
+  background-color:#4278e5;
+}
+
+/* Apply mustard yellow background for elements with the .clicked class */
+.clicked {
+  background-color: #E5AF42;
+}
+
+
+
+#main {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+
+
+footer {
+  height: 120px;
+  font-weight: 200;
+  text-align: center;
+  line-height: 60px;
+  background-color: var(--mustard-yellow); /* Add background color if needed */
+  margin-bottom: 12px;
+}
+
+/* Style the anchor links inside the footer */
+footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************* contact page *************/
+/* TO DO:
+    - the main section of the .contact page will be 420px tall, and centered.
+    - the contents will be 2 columns: the labels column is 150px wide and right-aligned, and the input column is 300px wide. There will be 24px of space between the columns, and the pair of columns will be centered on the page.
+    - the textarea element will be 150px tall.
+    - all form input, textarea, and and button elements will have the same font as the rest of the page, a line-height of 24px, a font-size of 16px, and the same border as other buttons on the site. There will be 24px of space below each of these elements.
+    - the edges of the button will line up exactly with the text-area element. HINT: time for some math!
+*/
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+:root {
+  --mustard-yellow: #E5AF42;
+  --cornflower-blue: #4278e5;
+}
+
+
+/************* site defaults *************/
+body {
+  width: 950px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+}
+
+
+
+header,
+footer {
+background-color: var(--mustard-yellow);
+}
+
+header {
+height: 150px;
+position: relative;
+margin-top: 15px;
+
+}
+
+header img {
+width: 100px;
+height: 100px;
+margin: 25px;
+position: absolute;
+
+
+
+}
+
+
+header h1 {
+  position: absolute;
+  left: 50%; /* Set left to 50% */
+  transform: translateX(-50%); /* Center the text using transform */
+  text-align: center;
+  line-height: 100px;
+  color: #000;
+}
+
+
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+}
+
+.contact {
+  height: 420px;
+}
+
+.contact-form {
+  display: flex;
+  gap: 24px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+label {
+  margin-bottom: 6px;
+}
+
+input,
+textarea,
+button {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 24px;
+  font-size: 16px;
+  border: 1px solid #000;
+  margin-bottom: 12px;
+}
+
+button {
+  cursor: pointer;
+  width: 300px;
+  height: 35px;
+  background-color: #E5AF42;
+}
+
+button:hover {
+  cursor: pointer;
+  width: 300px;
+  height: 35px;
+  background-color: #4278e5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  height: 120px;
+  font-weight: 200;
+  text-align: center;
+  line-height: 60px;
+  background-color: var(--mustard-yellow); /* Add background color if needed */
+  margin-bottom: 12px;
+  
+}
+
+/* Style the anchor links inside the footer */
+footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+
